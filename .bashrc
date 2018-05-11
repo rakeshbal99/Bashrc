@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
@@ -127,10 +127,10 @@ export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
 
 # added by Anaconda3 4.4.0 installer
 # export PATH="/home/rakesh/anaconda3/bin:$PATH"
-source /opt/ros/kinetic/setup.bash
-# alias gpu_lab='ssh -X 16CS10043@10.5.18.109'
+# source /opt/ros/kinetic/setup.bash
+alias gpu_lab='ssh -X 16CS10043@10.5.18.109'
 # alias gpu_lab2='ssh -X 14CS30025@10.5.18.108'
-# alias gpu_lab3='ssh -X siplab@10.9.7.57'	
+# alias gpu_lab3='ssh -X siplab@10.9.7.57'  
 # alias gt-dr="cd ~/git_repositories/My_Repositories"
 # alias gpu_bind='ssh -N -f -L 127.0.0.1:8888:127.0.0.1:8888 16CS10043@10.5.18.109'
 # alias Hard_Restart='Ctrl + Alt + PtRc+ B'
@@ -171,3 +171,11 @@ if [ -f '/home/rakesh/google-cloud-sdk/path.bash.inc' ]; then source '/home/rake
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/rakesh/google-cloud-sdk/completion.bash.inc' ]; then source '/home/rakesh/google-cloud-sdk/completion.bash.inc'; fi
+
+# function javab()
+# {
+#  javac $1.java && java $1;
+# }
+
+export PATH=$HOME/omnetpp-5.3/bin:$PATH
+export PATH=$PATH:$HOME/src/plexe-sumo/sumo/bin
